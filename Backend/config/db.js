@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
-const URI = process.env.MONGODB_URL;
+
 mongoose
-  .connect('mongodb://idc4k:Jrmk70@2025@cluster0.dlkfzsy.mongodb.net/test',
+  .connect("mongodb+srv://" + process.env.MONGODB_ID + "@cluster0.dlkfzsy.mongodb.net/test",
     {
-      useNewUrlParser: true,
+      useNewUrlParser : true,
+      useUnifiedTopology : true
       
     }
   )
