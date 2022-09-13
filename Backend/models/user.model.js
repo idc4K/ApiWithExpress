@@ -50,7 +50,11 @@ const userSchema = new mongoose.Schema(
 );
 
 //Avant de suvegarder dans la BD crypter password
-
+userSchema.pre("save",async function(next) {
+    const salt =  await bcrypt.genSalt();
+    this.password = await bcrypt.hash(this.password, salt);
+    next();
+});
 const UserModel = mongoose.model("user", userSchema);
 
 module.exports = UserModel;
