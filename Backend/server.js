@@ -5,11 +5,6 @@ const app = express();
 const userRoutes = require('./routes/user.routes');
 
 
-
-
-
-
-
 //routes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
