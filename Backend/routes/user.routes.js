@@ -5,5 +5,5 @@ const userController = require('../controllers/user.controller');
 router.post('/register', authController.signUp);
 
 //Crud Users
-router.post('/',userController.GetAllUsers);
+router.get('/',userController.GetAllUsers);
 module.exports = router;
