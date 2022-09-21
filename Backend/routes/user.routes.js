@@ -7,5 +7,5 @@ router.post('/register', authController.signUp);
 //Crud Users
 router.get('/',userController.GetAllUsers);
 router.get('/:id', userController.UserInfos);
-router.put('/:id',userController.UpdateUser)
+router.put('/:id',userController.UpdateUser);
 module.exports = router;

@@ -31,16 +31,15 @@ module.exports.UpdateUser = async (req,res) =>{
                     bio:req.body.bio
                 }
             },
-            {new:true,upsert:true,setDefaultsOnInsert:true},
+            { new:true, upsert:true, setDefaultsOnInsert:true },
             (err,docs) =>{
-                if(!err) return res.send(docs);
-                if(err) return res.status(5000).send({message:err});
+                if (!err) return res.send(docs);
+                if (err) return res.status(500).send({ messageif: err });
             }
 
-        );
+        ).clone();
         
-    }
-    catch(err){
-        return res.status(500).send({message:err});
+    } catch(err){
+        return res.status(500).json({messagepartout:err});
     }
 };
