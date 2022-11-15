@@ -8,6 +8,6 @@ mongoose
       
     }
   )
-  .then(() => console.log("connexion reussit"))
+  .then(() => console.log("connected to Mongo Db"))
   .catch((err) => console.log("log fail", err));
 
