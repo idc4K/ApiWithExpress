@@ -13,5 +13,5 @@ app.use('/api/user', userRoutes);
 
 // server
 app.listen(process.env.PORT, () => {
-  console.log(`listening on ports ${process.env.PORT}`);
+  console.log(`listeninggg on ports ${process.env.PORT}`);
 });
